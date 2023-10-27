@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>双系统Ubuntu下安装梯子及相关配置</title>
+      <link href="/2023/10/24/%E5%8F%8C%E7%B3%BB%E7%BB%9FUbuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E6%A2%AF%E5%AD%90%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/"/>
+      <url>/2023/10/24/%E5%8F%8C%E7%B3%BB%E7%BB%9FUbuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E6%A2%AF%E5%AD%90%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h2 id="下载安装包"><a href="#下载安装包" class="headerlink" title="下载安装包"></a>下载安装包</h2><p>本教程使用的是clash软件  (由于可能双系统上不能够登录github, 可以先在win系统下下载至U盘，然后拷贝至双系统中) <a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">点我下载</a> </p><p><img src="https://s2.loli.net/2023/10/24/Q8YBtFqI1lrNgmd.png"></p><h2 id="手动代理配置"><a href="#手动代理配置" class="headerlink" title="手动代理配置"></a>手动代理配置</h2><p>首先打开系统设置  -&gt; 点击网络 -&gt; 网络代理改为手动</p><p><img src="https://s2.loli.net/2023/10/24/LT2GsqUbrQMn3NY.png"></p><p>将2、4、6都改为主机地址127.0.0.1, 端口号都改为clash软件对应的7890 (因为我是在虚拟机上演示的，故ip地址的设置会与双系统上设置不同)</p><p><img src="https://s2.loli.net/2023/10/24/z7VwcLbMlOtXhvY.png"></p><h2 id="启动Clash"><a href="#启动Clash" class="headerlink" title="启动Clash"></a>启动Clash</h2><p>进入安装包目录，在此目录下打开终端，输入.&#x2F;cfw即启动成功</p><h2 id="导入配置文件"><a href="#导入配置文件" class="headerlink" title="导入配置文件"></a>导入配置文件</h2><p>在clash界面上的配置界面导入您订阅的的相关配置文件即可</p><p><img src="https://s2.loli.net/2023/10/27/jZfhlmN8TAtIRwc.png"></p><p>最后你就可以愉快的网上冲浪了！！！</p><p><img src="https://s2.loli.net/2023/10/27/yajcI7f3C6JbZgx.png"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo + GitHub 博客步骤</title>
+      <link href="/2023/07/17/%E5%88%9D%E5%A7%8B%E5%8C%96hexo%E5%8D%9A%E5%AE%A2%E6%AD%A5%E9%AA%A4/"/>
+      <url>/2023/07/17/%E5%88%9D%E5%A7%8B%E5%8C%96hexo%E5%8D%9A%E5%AE%A2%E6%AD%A5%E9%AA%A4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="静态博客-—–-Hexo"><a href="#静态博客-—–-Hexo" class="headerlink" title="静态博客 —– Hexo"></a>静态博客 —– Hexo</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>静态博客：指没有后端数据库的博客，所有文章都是以文件的形式存储，是一种纯前端的博客框架。</p><p>Hexo是通过&#x3D;&#x3D; Node.js &#x3D;&#x3D;生成的，首先需要根据自己的操作系统版本<a href="https://nodejs.org/en/download">下载</a>并安装Node.js</p><h2 id="ALL-steps-本地安装"><a href="#ALL-steps-本地安装" class="headerlink" title="ALL steps (本地安装)"></a>ALL steps (本地安装)</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装<a href="https://nodejs.org/en/download">Node.js</a></h3><p>node -v  查看node版本</p><p>npm -v  查看npm版本</p><h3 id="安装淘宝的cnpm管理器"><a href="#安装淘宝的cnpm管理器" class="headerlink" title="安装淘宝的cnpm管理器"></a>安装淘宝的cnpm管理器</h3><p>因为npm代码仓库的服务器在国外，由于Great Firewall的原因，下载速度可能不尽如人意，可以使用淘宝的npm代码仓库，通过npm安装cnpm</p><p>npm install -g cnpm –registry&#x3D;<a href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a></p><p>cnpm -v  查看cnpm版本</p><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>cnpm install -g hexo-cli  安装hexo框架</p><p>hexo -v  查看hexo版本</p><h3 id="使用hexo"><a href="#使用hexo" class="headerlink" title="使用hexo"></a>使用hexo</h3><p>mkdir blog  创建blog目录</p><p>hexo init  生成博客 初始化博客</p><p>hexo s(start)  启动本地博客服务</p><p><a href="http://localhost:4000/">http://localhost:4000/</a>  本地访问地址</p><p>hexo n (new)  “xxxxxxx”  创建新的文章</p><p>hexo clean  清理</p><p>hexo g (generate)  生成</p><h3 id="部署GitHub"><a href="#部署GitHub" class="headerlink" title="部署GitHub"></a>部署GitHub</h3><p>新建一个新的仓库  YourGitHubName.github.io</p><p>cnpm install –save hexo-deployer-git  在blog目录下安装git部署插件</p><h3 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置 _config.yml"></a>配置 _config.yml</h3><p>在blog的目录下，找到_config.yml文件，在#Deployment做如下修改：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="comment"># type、repo、branch后面都要加一个空格</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/zzkww/zzkww.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure><p>hexo d  部署至GitHub仓库里</p><p><a href="https://yourgithubname.github.io/">https://YourGithubName.github.io/</a>   访问此地址就可以查看自己的博客了</p><h3 id="大功告成！！！"><a href="#大功告成！！！" class="headerlink" title="大功告成！！！"></a>大功告成！！！</h3><p><img src="https://img.51miz.com/Element/00/21/28/86/4cbde72a_E212886_97300b88.png"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我的第一篇博客文章</title>
+      <link href="/2023/07/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
+      <url>/2023/07/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容：</p><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容：</p><h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p>内容：</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2023/07/16/hello-world/"/>
+      <url>/2023/07/16/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
